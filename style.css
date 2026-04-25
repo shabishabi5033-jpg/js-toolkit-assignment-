@@ -3,6 +3,18 @@ body {
     text-align: center;
     padding: 50px;
     background-color: #e0f7f1; /* Mint background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 button {
