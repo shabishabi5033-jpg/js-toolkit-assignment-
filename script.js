@@ -45,3 +45,26 @@ copyBtn.addEventListener('click', () => {
     setTimeout(() => copyBtn.textContent = originalIcon, 2000);
 });
 
+// Tool 3: Color Converter Functionality
+const rVal = document.getElementById('r-val');
+const gVal = document.getElementById('g-val');
+const bVal = document.getElementById('b-val');
+const hexOutput = document.getElementById('hex-output');
+const colorPreview = document.getElementById('color-preview');
+
+const updateColor = () => {
+    const r = Math.min(255, Math.max(0, parseInt(rVal.value) || 0));
+    const g = Math.min(255, Math.max(0, parseInt(gVal.value) || 0));
+    const b = Math.min(255, Math.max(0, parseInt(bVal.value) || 0));
+    
+    const hex = "#" + [r, g, b].map(x => {
+        const hex = x.toString(16);
+        return hex.length === 1 ? '0' + hex : hex;
+    }).join("");
+    
+    hexOutput.value = hex.toUpperCase();
+    colorPreview.style.background = hex;
+};
+
+[rVal, gVal, bVal].forEach(el => el.addEventListener('input', updateColor));
+

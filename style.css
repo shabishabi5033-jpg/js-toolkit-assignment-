@@ -211,3 +211,24 @@ input[type="range"] {
     background: #4f46e5;
     box-shadow: 0 0 20px var(--accent-glow);
 }
+
+.color-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="number"] {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.75rem 0.5rem;
+    color: white;
+    text-align: center;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: var(--accent);
+}

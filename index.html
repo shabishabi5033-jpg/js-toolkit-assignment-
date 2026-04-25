@@ -56,6 +56,24 @@
                     <button id="gen-btn" class="btn-primary">Generate Shield</button>
                 </div>
             </div>
+            <!-- Tool 3: Color Converter -->
+            <div class="card glass" id="tool-color">
+                <div class="card-header">
+                    <span class="icon">🎨</span>
+                    <h2>Color Hex</h2>
+                </div>
+                <div class="card-body">
+                    <div class="color-inputs">
+                        <input type="number" id="r-val" min="0" max="255" value="99" placeholder="R">
+                        <input type="number" id="g-val" min="0" max="255" value="102" placeholder="G">
+                        <input type="number" id="b-val" min="0" max="255" value="241" placeholder="B">
+                    </div>
+                    <div class="output-row">
+                        <input type="text" id="hex-output" readonly value="#6366f1">
+                        <div id="color-preview" style="background: #6366f1; width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--border);"></div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
